@@ -4,7 +4,7 @@ public:
         int n = nums.size();
         int ans = INT_MAX;
 
-        // Check rotations of original array
+       
         bool ok = true;
 
         for (int i = 0; i < n; i++) {
@@ -19,7 +19,7 @@ public:
             ans = min(ans, min(k, n - k + 2));
         }
 
-        // Check rotations after reversing
+        
         ok = true;
 
         for (int i = 0; i < n; i++) {
