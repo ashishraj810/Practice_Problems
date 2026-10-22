@@ -4,7 +4,7 @@ public:
         int n = nums.size();
         int ans = INT_MAX;
 
-        // Case 1: Rotate the original array
+        // Check rotations of original array
         bool ok = true;
 
         for (int i = 0; i < n; i++) {
@@ -19,7 +19,7 @@ public:
             ans = min(ans, min(k, n - k + 2));
         }
 
-        // Case 2: Reverse, then rotate
+        // Check rotations after reversing
         ok = true;
 
         for (int i = 0; i < n; i++) {
@@ -34,6 +34,10 @@ public:
             ans = min(ans, min(k, n - k) + 1);
         }
 
-        return ans == INT_MAX ? -1 : ans;
+        if (ans == INT_MAX) {
+            return -1;
+        }
+
+        return ans;
     }
 };
