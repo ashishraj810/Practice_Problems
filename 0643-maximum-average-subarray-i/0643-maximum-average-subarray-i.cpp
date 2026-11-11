@@ -5,7 +5,6 @@ public:
 
         int n = nums.size();
 
-        // Calculate sum of first k elements
         int sum = 0;
 
         for(int i = 0; i < k; i++) {
@@ -14,7 +13,6 @@ public:
 
         int maxSum = sum;
 
-        // Slide the window
         for(int i = k; i < n; i++) {
 
             sum = sum - nums[i-k] + nums[i];
